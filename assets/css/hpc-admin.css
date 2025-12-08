@@ -1,0 +1,6 @@
+.hpc-meta-grid .hpc-meta-field { margin-bottom: 12px; }
+.hpc-gallery-wrapper { margin-top: 10px; }
+.hpc-gallery-list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; gap: 10px; flex-wrap: wrap; }
+.hpc-gallery-list li { position: relative; border: 1px solid #ddd; padding: 3px; }
+.hpc-gallery-list img { display: block; max-width: 120px; height: auto; }
+.hpc-gallery-list .hpc-remove { position: absolute; top: -8px; right: -8px; background: #d63638; color: #fff; border-radius: 50%; width: 18px; height: 18px; text-align: center; line-height: 18px; cursor: pointer; }
