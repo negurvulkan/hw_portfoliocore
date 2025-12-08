@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Hanjo Portfolio Core
  * Description: Custom post types, meta fields, and Elementor widgets for a CV & portfolio site.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: ChatGPT
  * Text Domain: hanjo-portfolio-core
  * Domain Path: /languages
