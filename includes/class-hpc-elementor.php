@@ -38,7 +38,9 @@ if ( ! class_exists( 'HPC_Elementor' ) ) {
          * Constructor.
          */
         private function __construct() {
-            add_action( 'plugins_loaded', array( $this, 'init' ) );
+            // Hook after plugins are loaded so Elementor can initialize, but early enough
+            // that the widgets are registered before the editor loads.
+            add_action( 'init', array( $this, 'init' ) );
         }
 
         /**
