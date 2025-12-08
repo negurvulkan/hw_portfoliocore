@@ -84,11 +84,29 @@ if ( ! class_exists( 'HPC_Elementor' ) ) {
             require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-project-highlight.php';
             require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-experience-timeline.php';
             require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-skill-chips.php';
+            require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-hero.php';
+            require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-section-header.php';
+            require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-about-text.php';
+            require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-about-details.php';
+            require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-cv-sidebar.php';
+            require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-facts.php';
+            require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-workflow.php';
+            require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-cta-banner.php';
+            require_once HPC_PLUGIN_DIR . 'includes/elementor-widgets/class-hpc-widget-logo-grid.php';
 
             $widgets_manager->register( new \HPC_Widget_Project_Grid() );
             $widgets_manager->register( new \HPC_Widget_Project_Highlight() );
             $widgets_manager->register( new \HPC_Widget_Experience_Timeline() );
             $widgets_manager->register( new \HPC_Widget_Skill_Chips() );
+            $widgets_manager->register( new \HPC_Widget_Hero() );
+            $widgets_manager->register( new \HPC_Widget_Section_Header() );
+            $widgets_manager->register( new \HPC_Widget_About_Text() );
+            $widgets_manager->register( new \HPC_Widget_About_Details() );
+            $widgets_manager->register( new \HPC_Widget_CV_Sidebar() );
+            $widgets_manager->register( new \HPC_Widget_Facts() );
+            $widgets_manager->register( new \HPC_Widget_Workflow() );
+            $widgets_manager->register( new \HPC_Widget_CTA_Banner() );
+            $widgets_manager->register( new \HPC_Widget_Logo_Grid() );
         }
     }
 }
