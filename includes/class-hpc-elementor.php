@@ -38,6 +38,13 @@ if ( ! class_exists( 'HPC_Elementor' ) ) {
          * Constructor.
          */
         private function __construct() {
+            add_action( 'plugins_loaded', array( $this, 'init' ) );
+        }
+
+        /**
+         * Init Elementor hooks.
+         */
+        public function init() {
             if ( ! did_action( 'elementor/loaded' ) ) {
                 add_action( 'admin_notices', array( $this, 'admin_notice_missing_elementor' ) );
                 return;

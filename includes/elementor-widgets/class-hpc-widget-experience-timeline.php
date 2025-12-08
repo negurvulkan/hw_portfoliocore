@@ -31,7 +31,7 @@ if ( ! class_exists( 'HPC_Widget_Experience_Timeline' ) ) {
             return array( 'hpc_cv_portfolio' );
         }
 
-        protected function register_controls() {
+        protected function _register_controls() { // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
             $this->start_controls_section(
                 'content_section',
                 array(
