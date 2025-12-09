@@ -131,7 +131,11 @@ if ( ! class_exists( 'HPC_Widget_Skill_Chips' ) ) {
                 'hide_empty' => false,
             );
             if ( ! empty( $settings['terms_filter'] ) ) {
-                $args['include'] = array_map( 'intval', $settings['terms_filter'] );
+                $term_filter = is_string( $settings['terms_filter'] )
+                    ? preg_split( '/\s*,\s*/', $settings['terms_filter'], -1, PREG_SPLIT_NO_EMPTY )
+                    : $settings['terms_filter'];
+
+                $args['include'] = array_map( 'intval', (array) $term_filter );
             }
 
             $terms = get_terms( $args );
