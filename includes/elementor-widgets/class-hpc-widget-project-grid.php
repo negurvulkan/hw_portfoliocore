@@ -242,7 +242,7 @@ if ( ! class_exists( 'HPC_Widget_Project_Grid' ) ) {
             $roles    = get_post_meta( $post_id, 'projekt_roles', true );
             $tools    = get_post_meta( $post_id, 'projekt_tools', true );
             $type     = get_post_meta( $post_id, 'projekt_type', true );
-            $main_url = get_post_meta( $post_id, 'projekt_link_main', true );
+            $main_url = get_permalink( $post_id );
 
             $target_url = $main_url ? $main_url : get_permalink( $post_id );
 
