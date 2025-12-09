@@ -62,6 +62,7 @@ if ( ! class_exists( 'HPC_Widget_Workflow' ) ) {
                     'label'       => __( 'Schritt Titel', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
             $repeater->add_control(
@@ -70,6 +71,7 @@ if ( ! class_exists( 'HPC_Widget_Workflow' ) ) {
                     'label' => __( 'Beschreibung', 'hanjo-portfolio-core' ),
                     'type'  => Controls_Manager::TEXTAREA,
                     'rows'  => 3,
+                    'dynamic' => array( 'active' => true ),
                 )
             );
             $repeater->add_control(
@@ -79,6 +81,7 @@ if ( ! class_exists( 'HPC_Widget_Workflow' ) ) {
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
                     'placeholder' => '💡',
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 

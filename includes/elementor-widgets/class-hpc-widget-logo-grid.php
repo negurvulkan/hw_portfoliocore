@@ -73,6 +73,7 @@ if ( ! class_exists( 'HPC_Widget_Logo_Grid' ) ) {
                     'label'       => __( 'Label', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
             $repeater->add_control(
@@ -81,6 +82,7 @@ if ( ! class_exists( 'HPC_Widget_Logo_Grid' ) ) {
                     'label'         => __( 'URL', 'hanjo-portfolio-core' ),
                     'type'          => Controls_Manager::URL,
                     'show_external' => true,
+                    'dynamic'       => array( 'active' => true ),
                 )
             );
 

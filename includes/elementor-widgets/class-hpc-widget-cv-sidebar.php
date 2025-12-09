@@ -61,6 +61,7 @@ if ( ! class_exists( 'HPC_Widget_CV_Sidebar' ) ) {
                     'label'       => __( 'Name', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
             $this->add_control(
@@ -69,6 +70,7 @@ if ( ! class_exists( 'HPC_Widget_CV_Sidebar' ) ) {
                     'label'       => __( 'Ort', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
             $this->add_control(
@@ -77,6 +79,7 @@ if ( ! class_exists( 'HPC_Widget_CV_Sidebar' ) ) {
                     'label'       => __( 'E-Mail', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
             $this->add_control(
@@ -85,6 +88,7 @@ if ( ! class_exists( 'HPC_Widget_CV_Sidebar' ) ) {
                     'label'       => __( 'Website URL', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
             $this->add_control(
@@ -93,6 +97,7 @@ if ( ! class_exists( 'HPC_Widget_CV_Sidebar' ) ) {
                     'label'       => __( 'LinkedIn URL', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -105,6 +110,7 @@ if ( ! class_exists( 'HPC_Widget_CV_Sidebar' ) ) {
                     'label'       => __( 'Skill', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -134,6 +140,7 @@ if ( ! class_exists( 'HPC_Widget_CV_Sidebar' ) ) {
                     'label'       => __( 'Tool', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -169,6 +176,7 @@ if ( ! class_exists( 'HPC_Widget_CV_Sidebar' ) ) {
                     'label' => __( 'Kurztext', 'hanjo-portfolio-core' ),
                     'type'  => Controls_Manager::TEXTAREA,
                     'rows'  => 4,
+                    'dynamic' => array( 'active' => true ),
                 )
             );
 

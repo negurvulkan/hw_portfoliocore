@@ -81,6 +81,7 @@ if ( ! class_exists( 'HPC_Widget_Experience_Timeline' ) ) {
                     'label'       => __( 'Typ-Filter (kommagetrennt)', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'placeholder' => __( 'Job, Ausbildung', 'hanjo-portfolio-core' ),
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
