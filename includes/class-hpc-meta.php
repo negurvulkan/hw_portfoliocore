@@ -42,6 +42,7 @@ if ( ! class_exists( 'HPC_Meta' ) ) {
             add_action( 'save_post', array( $this, 'save_project_meta' ) );
             add_action( 'save_post', array( $this, 'save_experience_meta' ) );
             add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_assets' ) );
+            add_action( 'init', array( $this, 'register_meta_fields' ) );
         }
 
         /**
@@ -71,6 +72,19 @@ if ( ! class_exists( 'HPC_Meta' ) ) {
                 array(),
                 HPC_PLUGIN_VERSION
             );
+        }
+
+        /**
+         * Register meta fields for REST/Elementor usage.
+         */
+        public function register_meta_fields() {
+            foreach ( $this->get_project_meta_definitions() as $key => $args ) {
+                register_post_meta( 'projekt', $key, $args );
+            }
+
+            foreach ( $this->get_experience_meta_definitions() as $key => $args ) {
+                register_post_meta( 'experience', $key, $args );
+            }
         }
 
         /**
@@ -355,6 +369,92 @@ if ( ! class_exists( 'HPC_Meta' ) ) {
                     'description' => __( 'Optionaler numerischer Sortierwert.', 'hanjo-portfolio-core' ),
                 ),
             );
+        }
+
+        /**
+         * Meta registration config for projects.
+         *
+         * @return array
+         */
+        private function get_project_meta_definitions() {
+            $meta = array();
+
+            foreach ( $this->get_project_fields() as $key => $field ) {
+                $meta[ $key ] = $this->get_rest_meta_args( $field );
+            }
+
+            $meta['projekt_gallery'] = array(
+                'type'              => 'array',
+                'single'            => true,
+                'show_in_rest'      => array(
+                    'schema' => array(
+                        'type'  => 'array',
+                        'items' => array(
+                            'type' => 'integer',
+                        ),
+                    ),
+                ),
+                'sanitize_callback' => array( $this, 'sanitize_gallery_meta' ),
+                'auth_callback'     => '__return_true',
+            );
+
+            return $meta;
+        }
+
+        /**
+         * Meta registration config for experiences.
+         *
+         * @return array
+         */
+        private function get_experience_meta_definitions() {
+            $meta = array();
+
+            foreach ( $this->get_experience_fields() as $key => $field ) {
+                $meta[ $key ] = $this->get_rest_meta_args( $field );
+            }
+
+            return $meta;
+        }
+
+        /**
+         * Build REST meta args from field config.
+         *
+         * @param array $field Field definition.
+         *
+         * @return array
+         */
+        private function get_rest_meta_args( $field ) {
+            $type = 'string';
+
+            if ( isset( $field['type'] ) && 'checkbox' === $field['type'] ) {
+                $type = 'boolean';
+            }
+
+            return array(
+                'type'          => $type,
+                'single'        => true,
+                'show_in_rest'  => true,
+                'auth_callback' => '__return_true',
+            );
+        }
+
+        /**
+         * Sanitize gallery meta value.
+         *
+         * @param mixed $value Raw value.
+         *
+         * @return array
+         */
+        public function sanitize_gallery_meta( $value ) {
+            if ( is_string( $value ) ) {
+                $value = explode( ',', $value );
+            }
+
+            if ( ! is_array( $value ) ) {
+                return array();
+            }
+
+            return array_values( array_filter( array_map( 'absint', $value ) ) );
         }
     }
 }
