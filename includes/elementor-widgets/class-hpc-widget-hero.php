@@ -61,6 +61,7 @@ if ( ! class_exists( 'HPC_Widget_Hero' ) ) {
                     'label'       => __( 'Kicker', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -70,6 +71,7 @@ if ( ! class_exists( 'HPC_Widget_Hero' ) ) {
                     'label'       => __( 'Titel', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -79,6 +81,7 @@ if ( ! class_exists( 'HPC_Widget_Hero' ) ) {
                     'label' => __( 'Untertitel', 'hanjo-portfolio-core' ),
                     'type'  => Controls_Manager::TEXTAREA,
                     'rows'  => 4,
+                    'dynamic' => array( 'active' => true ),
                 )
             );
 
@@ -89,6 +92,7 @@ if ( ! class_exists( 'HPC_Widget_Hero' ) ) {
                     'label'       => __( 'Button Text', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
             $buttons_repeater->add_control(
@@ -98,6 +102,7 @@ if ( ! class_exists( 'HPC_Widget_Hero' ) ) {
                     'type'          => Controls_Manager::URL,
                     'show_external' => true,
                     'placeholder'   => __( 'https://dein-link.de', 'hanjo-portfolio-core' ),
+                    'dynamic'       => array( 'active' => true ),
                 )
             );
             $buttons_repeater->add_control(
@@ -130,6 +135,7 @@ if ( ! class_exists( 'HPC_Widget_Hero' ) ) {
                     'label'       => __( 'Tag', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 

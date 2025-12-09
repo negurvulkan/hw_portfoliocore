@@ -60,6 +60,7 @@ if ( ! class_exists( 'HPC_Widget_Section_Header' ) ) {
                     'label'       => __( 'Kicker', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -69,6 +70,7 @@ if ( ! class_exists( 'HPC_Widget_Section_Header' ) ) {
                     'label'       => __( 'Titel', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -78,6 +80,7 @@ if ( ! class_exists( 'HPC_Widget_Section_Header' ) ) {
                     'label' => __( 'Untertitel', 'hanjo-portfolio-core' ),
                     'type'  => Controls_Manager::TEXTAREA,
                     'rows'  => 3,
+                    'dynamic' => array( 'active' => true ),
                 )
             );
 

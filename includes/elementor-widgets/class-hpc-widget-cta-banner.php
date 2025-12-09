@@ -61,6 +61,7 @@ if ( ! class_exists( 'HPC_Widget_CTA_Banner' ) ) {
                     'label'       => __( 'Titel', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -70,6 +71,7 @@ if ( ! class_exists( 'HPC_Widget_CTA_Banner' ) ) {
                     'label' => __( 'Beschreibung', 'hanjo-portfolio-core' ),
                     'type'  => Controls_Manager::TEXTAREA,
                     'rows'  => 4,
+                    'dynamic' => array( 'active' => true ),
                 )
             );
 
@@ -80,6 +82,7 @@ if ( ! class_exists( 'HPC_Widget_CTA_Banner' ) ) {
                     'label'       => __( 'Button Text', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
             $buttons_repeater->add_control(
@@ -88,6 +91,7 @@ if ( ! class_exists( 'HPC_Widget_CTA_Banner' ) ) {
                     'label'         => __( 'Button URL', 'hanjo-portfolio-core' ),
                     'type'          => Controls_Manager::URL,
                     'show_external' => true,
+                    'dynamic'       => array( 'active' => true ),
                 )
             );
             $buttons_repeater->add_control(

@@ -60,6 +60,7 @@ if ( ! class_exists( 'HPC_Widget_About_Text' ) ) {
                     'label'       => __( 'Kleine Überschrift', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -69,6 +70,7 @@ if ( ! class_exists( 'HPC_Widget_About_Text' ) ) {
                     'label'       => __( 'Titel', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
@@ -77,6 +79,7 @@ if ( ! class_exists( 'HPC_Widget_About_Text' ) ) {
                 array(
                     'label' => __( 'Text', 'hanjo-portfolio-core' ),
                     'type'  => Controls_Manager::WYSIWYG,
+                    'dynamic' => array( 'active' => true ),
                 )
             );
 

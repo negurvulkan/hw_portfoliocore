@@ -60,6 +60,7 @@ if ( ! class_exists( 'HPC_Widget_Skill_Chips' ) ) {
                     'label'   => __( 'Label', 'hanjo-portfolio-core' ),
                     'type'    => Controls_Manager::TEXT,
                     'default' => __( 'Skill', 'hanjo-portfolio-core' ),
+                    'dynamic' => array( 'active' => true ),
                 )
             );
             $repeater->add_control(
@@ -67,6 +68,7 @@ if ( ! class_exists( 'HPC_Widget_Skill_Chips' ) ) {
                 array(
                     'label' => __( 'Gruppe', 'hanjo-portfolio-core' ),
                     'type'  => Controls_Manager::TEXT,
+                    'dynamic' => array( 'active' => true ),
                 )
             );
 

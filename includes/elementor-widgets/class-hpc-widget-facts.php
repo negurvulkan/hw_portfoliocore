@@ -62,6 +62,7 @@ if ( ! class_exists( 'HPC_Widget_Facts' ) ) {
                     'label'       => __( 'Wert / Zahl', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
             $repeater->add_control(
@@ -70,6 +71,7 @@ if ( ! class_exists( 'HPC_Widget_Facts' ) ) {
                     'label'       => __( 'Label', 'hanjo-portfolio-core' ),
                     'type'        => Controls_Manager::TEXT,
                     'label_block' => true,
+                    'dynamic'     => array( 'active' => true ),
                 )
             );
 
