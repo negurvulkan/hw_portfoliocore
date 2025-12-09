@@ -116,7 +116,7 @@ if ( ! class_exists( 'HPC_Widget_Skill_Chips' ) ) {
 
         protected function render() {
             $settings = $this->get_settings_for_display();
-            echo '<div class="hpc-skill-chips">';
+            echo '<div class="hpc-skill-chips pill-row">';
             if ( 'terms' === $settings['source'] ) {
                 $this->render_terms( $settings );
             } else {
@@ -145,11 +145,11 @@ if ( ! class_exists( 'HPC_Widget_Skill_Chips' ) ) {
             }
 
             foreach ( $terms as $term ) {
-                echo '<span class="hpc-skill-chip">' . esc_html( $term->name );
+                echo '<span class="pill hpc-skill-chip">' . esc_html( $term->name );
                 if ( ! empty( $term->description ) ) {
                     echo '<small class="hpc-skill-group">' . esc_html( $term->description ) . '</small>';
                 }
-                echo '</span> ';
+                echo '</span>';
             }
         }
 
@@ -159,11 +159,11 @@ if ( ! class_exists( 'HPC_Widget_Skill_Chips' ) ) {
                 return;
             }
             foreach ( $settings['chips'] as $chip ) {
-                echo '<span class="hpc-skill-chip">' . esc_html( $chip['label'] );
+                echo '<span class="pill hpc-skill-chip">' . esc_html( $chip['label'] );
                 if ( ! empty( $chip['group'] ) ) {
                     echo '<small class="hpc-skill-group">' . esc_html( $chip['group'] ) . '</small>';
                 }
-                echo '</span> ';
+                echo '</span>';
             }
         }
     }
